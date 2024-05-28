@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>SMART HOME</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" type="text/css" href="{% static 'fonts/material-design-iconic-font/css/material-design-iconic-font.min.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<div class="inner">
+				<form method="POST" action="">
+					{% csrf_token %}
+					<h3> Sign-Up </h3>
+					<br>
+                    <label class="form-group" >
+						<input type="text" class="form-control" name="firstname">
+						<span for="">First name</span>
+						<span class="border"></span>
+					</label>
+                    <label class="form-group" >
+						<input type="text" class="form-control" name="lastname">
+						<span for="">Last name</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group">
+						<input type="text" class="form-control"  name="username">
+						<span>Username</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group">
+						<input type="email" class="form-control"  name="email">
+						<span for="">Your Mail</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group">
+						<input type="text" class="form-control"  name="room">
+						<span for="">Your Room</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group" >
+						<input type="password" class="form-control" name="password1">
+						<span for="">Password</span>
+						<span class="border"></span>
+					</label>
+                    <label class="form-group" >
+						<input type="password" class="form-control" name="password2">
+						<span for="">Re-enter Password</span>
+						<span class="border"></span>
+					</label>
+					<button name="action" value="submit">Submit
+						<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+					<button name="action" value="exist_user">Have Account
+						<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+				</form>
+				<!--<div class="container text-align-center">
+    				{% if messages %}
+            			<div id="messages-container">
+                			{% for message in messages %}
+                    			<div class="message {{ message.tags }}">
+                        			{{ message }}
+                        		<span class="close-btn" onclick="closeMessage(this)">×</span>
+                    			</div>
+                			{% endfor %}
+            			</div>
+    				{% endif %}
+    			</div>-->
+			</div>
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>SMART HOME</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+		<link rel="stylesheet" type="text/css" href="{% static 'fonts/material-design-iconic-font/css/material-design-iconic-font.min.css' %}">
+    	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<div class="inner">
+				<form method="POST" action="">
+					{% csrf_token %}
+					<h3> Login </h3>
+					<br>
+					<label class="form-group">
+						<input type="text" class="form-control"  name="username">
+						<span>Username</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group" >
+						<input type="password" class="form-control" name="password">
+						<span for="">Password</span>
+						<span class="border"></span>
+					</label>
+					<label class="form-group" >
+						<input type="text" class="form-control" name="room_id">
+						<span for="">Room ID</span>
+						<span class="border"></span>
+					</label>
+					<button name="action" value="submit" id="submit">Submit
+						<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+					<button name="action" value="new_user">New User<i class="zmdi zmdi-arrow-right"></i></button>
+				</form>
+			</div>
+		</div>
+
+
+
+
+<script src="{% static 'js/script.js' %}"></script>
+	</body>
+</html>
